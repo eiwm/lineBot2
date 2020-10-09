@@ -10,12 +10,12 @@ def index():
     a=os.environ['Authorization']
     try:
        f = open("student.csv", "r")
-        for line in f.readlines():
+       for line in f.readlines():
             print(line)
             a = line.split(",")
             if(a[0]=="00001"):
                 return a[4]
-        f.close()
+       f.close()
     except Exception:
         return "Could not read to file"
     
